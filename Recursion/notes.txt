@@ -1,0 +1,7 @@
+Recursion: When a function is called again and again until a specified condition is met, it is called recursion.
+Stack overflow: When you have infinite recursion, the functions will be in waiting to be executed and eventually the stack will be full and run out of space.
+Stack space: It stores yet to be executed functions.
+Base condition: We have to specify a condition until which the function should be called and executed. We cannot have recursion going on forever. Also called stop condition.
+If you write a return statement in the function, the function is terminated then and there.
+
+Recursion Tree: the function call is represented in the form of a tree.

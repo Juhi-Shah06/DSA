@@ -1,0 +1,22 @@
+// To extract the digits from a numbers , we have to perform to operations: modulus and division
+// If we want the last digit of the number, do n%10
+// If we do not want the last digit , n/10
+// example: 7789 % 10 = 9
+//          7789 / 10 = 778
+// Eventually there will be a point where you will get 0.
+// After the digits are extracted, we notice that it is in decreasing order.
+
+// Psuedocode:
+// int n
+// while(n>0){
+//     last_digit = n%10
+//     n = n/10
+// }
+
+// Whenever the problem involves division, the time complexity will be algorithmic.
+// Time complexity: O(log(base 10) n)
+
+// Eucleadian Algorithm
+// If we want to find gcd then:
+// gcd(a,b) = gcd(greater_number % smaller_number)  until one of them is 0 and the other number is gcd.
+// time complexity: O(log5 min(a,b))
