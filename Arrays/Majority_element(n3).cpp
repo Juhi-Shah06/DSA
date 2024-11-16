@@ -24,9 +24,7 @@ Space Complexity: O(N) as we are using a map data structure. We are also using a
 
 [Optimal Approach]
 Time complexity: O(log N)
-
 Space complexity: O(1)
-
 */
 
 // Brute Force Approach

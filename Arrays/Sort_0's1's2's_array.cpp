@@ -8,19 +8,22 @@ Output: [0,1,2]
 Input: nums = [0]
 Output: [0]
 
-Time Complexity: O(N*logN)         [Brute Force approach]
+[Brute Force approach]
+Time Complexity: O(N*logN)         
 Space Complexity: O(1)
 
-Time Complexity: O(N) + O(N), where N = size of the array.        [Better approach]
+[Better approach]
+Time Complexity: O(N) + O(N), where N = size of the array.       
 First O(N) for counting the number of 0’s, 1’s, 2’s, and second O(N) for placing them correctly in the original array.
 Space Complexity: O(1) as we are not using any extra space.
 
 DUTCH NATIONAL FLAG ALGORITHM
-Time Complexity: O(N), where N = size of the given array.        [Optimal approach]
+[Optimal approach]
+Time Complexity: O(N), where N = size of the given array.        
 Reason: We are using a single loop that can run at most N times.
 Space Complexity: O(1) as we are not using any extra space.*/
 
-// Brute force approach
+
 #include <iostream>
 using namespace std;
 
@@ -143,3 +146,5 @@ int main()
     }
     return 0;
 }
+
+
