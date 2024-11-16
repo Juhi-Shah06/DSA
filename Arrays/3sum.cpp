@@ -28,93 +28,93 @@ Space Complexity: O(2 * no. of the unique triplets) as we are using a set data s
 #include <algorithm>
 using namespace std;
 
-// int main()
-// {
-//     int n;
-//     cout << "Enter the number of elements in the array: ";
-//     cin >> n;
-//     int arr[50];
-//     cout << "Enter the elements in the array: ";
-//     for (int i = 0; i < n; i++)
-//     {
-//         cin >> arr[i];
-//     }
+int main()
+{
+    int n;
+    cout << "Enter the number of elements in the array: ";
+    cin >> n;
+    int arr[50];
+    cout << "Enter the elements in the array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
 
-//     set<vector<int>> st;
-//     for (int i = 0; i < n; i++)
-//     {
-//         for (int j = i + 1; j < n; j++)
-//         {
-//             for (int k = j + 1; k < n; k++)
-//             {
-//                 if (arr[i] + arr[j] + arr[k] == 0)
-//                 {
-//                     vector<int> temp = {arr[i], arr[j], arr[k]};
-//                     sort(temp.begin(), temp.end());
-//                     st.insert(temp);
-//                 }
-//             }
-//         }
-//     }
-//     vector<vector<int>> ans(st.begin(), st.end());
-//     cout << "Triplets with sum 0 are:\n";
-//     for (auto &it : ans)
-//     {
-//         cout << "[";
-//         for (auto &i : it)
-//         {
-//             cout << i << " ";
-//         }
-//         cout << "] ";
-//     }
-//     cout << "\n";
-//     return 0;
-// }
+    set<vector<int>> st;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            for (int k = j + 1; k < n; k++)
+            {
+                if (arr[i] + arr[j] + arr[k] == 0)
+                {
+                    vector<int> temp = {arr[i], arr[j], arr[k]};
+                    sort(temp.begin(), temp.end());
+                    st.insert(temp);
+                }
+            }
+        }
+    }
+    vector<vector<int>> ans(st.begin(), st.end());
+    cout << "Triplets with sum 0 are:\n";
+    for (auto &it : ans)
+    {
+        cout << "[";
+        for (auto &i : it)
+        {
+            cout << i << " ";
+        }
+        cout << "] ";
+    }
+    cout << "\n";
+    return 0;
+}
 
 // Better Approach
 
-// int main()
-// {
-//     int n;
-//     cout << "Enter the number of elements in the array: ";
-//     cin >> n;
-//     int arr[50];
-//     cout << "Enter the elements in the array: ";
-//     for (int i = 0; i < n; i++)
-//     {
-//         cin >> arr[i];
-//     }
+int main()
+{
+    int n;
+    cout << "Enter the number of elements in the array: ";
+    cin >> n;
+    int arr[50];
+    cout << "Enter the elements in the array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
 
-//     set<vector<int>> st;
-//     for (int i = 0; i < n; i++)
-//     {
-//         set<int> hashset;
-//         for (int j = i + 1; j < n; j++)
-//         {
-//             int third = -(arr[i] + arr[j]);
-//             if (hashset.find(third) != hashset.end())
-//             {
-//                 vector<int> temp = {arr[i], arr[j], third};
-//                 sort(temp.begin(), temp.end());
-//                 st.insert(temp);
-//             }
-//             hashset.insert(arr[j]);
-//         }
-//     }
-//     vector<vector<int>> ans(st.begin(), st.end());
-//     cout << "Triplets with sum 0 are:\n";
-//     for (auto &it : ans)
-//     {
-//         cout << "[";
-//         for (auto &i : it)
-//         {
-//             cout << i << " ";
-//         }
-//         cout << "] ";
-//     }
-//     cout << "\n";
-//     return 0;
-// }
+    set<vector<int>> st;
+    for (int i = 0; i < n; i++)
+    {
+        set<int> hashset;
+        for (int j = i + 1; j < n; j++)
+        {
+            int third = -(arr[i] + arr[j]);
+            if (hashset.find(third) != hashset.end())
+            {
+                vector<int> temp = {arr[i], arr[j], third};
+                sort(temp.begin(), temp.end());
+                st.insert(temp);
+            }
+            hashset.insert(arr[j]);
+        }
+    }
+    vector<vector<int>> ans(st.begin(), st.end());
+    cout << "Triplets with sum 0 are:\n";
+    for (auto &it : ans)
+    {
+        cout << "[";
+        for (auto &i : it)
+        {
+            cout << i << " ";
+        }
+        cout << "] ";
+    }
+    cout << "\n";
+    return 0;
+}
 
 // Optimal Approach
 int main()
