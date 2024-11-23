@@ -16,10 +16,10 @@ Input Format:
 Result:
  6 (for variation 1)
 1 4 6 4 1 (for variation 2)
-1 
-1 1 
-1 2 1 
-1 3 3 1 
+1
+1 1
+1 2 1
+1 3 3 1
 1 4 6 4 1    (for variation 3)
 
 Explanation:
@@ -36,3 +36,82 @@ Explanation:
  The output matrix has only 1 row.
 */
 
+// Variation 1
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+  int r, c;
+  cout << "Enter the row number: ";
+  cin >> r;
+  cout << "Enter the column number: ";
+  cin >> c;
+
+  long long res = 1;
+  for (int i = 0; i < c - 1; i++)
+  {
+    res = res * (r - 1 - i);
+    res = res / (i + 1);
+  }
+
+  cout << "The element at position (r, c) is: " << res << endl;
+  return 0;
+}
+
+// Variation 2
+
+int main()
+{
+
+  int n;
+  cout << "Enter the row number: ";
+  cin >> n;
+
+  long long ans = 1;
+  cout << ans << " ";
+  for (int i = 1; i < n; i++)
+  {
+    ans = ans * (n - i);
+    ans = ans / i;
+    cout << ans << " ";
+  }
+  cout << endl;
+
+  return 0;
+}
+
+// Variation 3
+
+int main()
+{
+  int n;
+  cout << "Enter the number of rows for Pascal's Triangle: ";
+  cin >> n;
+
+  vector<vector<int>> pascalTriangle;
+  for (int row = 1; row <= n; row++)
+  {
+    vector<int> currentRow;
+    long long ans = 1;
+    currentRow.push_back(1);
+    for (int col = 1; col < row; col++)
+    {
+      ans = ans * (row - col);
+      ans = ans / col;
+      currentRow.push_back(ans);
+    }
+    pascalTriangle.push_back(currentRow);
+  }
+  for (auto &it : pascalTriangle)
+  {
+    for (auto ele : it)
+    {
+      cout << ele << " ";
+    }
+    cout << endl;
+  }
+  return 0;
+}
