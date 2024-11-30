@@ -1,5 +1,6 @@
 /*Write a program to implement quick sort.
-Time complexity : O(n log n) */
+Time complexity : O(n log n) 
+Space complexity : O(n)*/
 
 #include <iostream>
 #include <vector>
