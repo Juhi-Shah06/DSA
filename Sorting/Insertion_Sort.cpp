@@ -5,8 +5,8 @@ Input: N = 6
 array[] = {13,46,24,52,20,9}
 Output: 9,13,20,24,46,52
 
-Time complexity: O()
-Space Complexity:
+Time complexity: O(N^2)
+Space Complexity:O(1)
 */
 
 #include <iostream>
